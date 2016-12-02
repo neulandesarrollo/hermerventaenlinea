@@ -1,0 +1,306 @@
+/***********/
+/*Content***/
+/***********/
+
+*
+	padding: 0
+	margin: 0
+
+
+#imgHeader
+	width: 100% 
+
+#imgLogo
+	width: 400px
+
+.anchoCol
+	padding-left: 0
+	padding-right: 0
+
+.title
+	font-family: CorpoA-bold
+
+.subtitle
+	font-family: CorpoA
+	font-size: 16px
+	color: #2b2b2b
+
+.subtitleFolio
+	font-family: CorpoA-bold
+	font-size: 16px
+
+#lineNav 
+	width: 350px
+	height: 5px
+	background-color: $verdeBtn
+	margin-bottom: -22px
+
+.normal
+	width: 40px
+	height: 40px
+	background-color: $verdeBtn
+	border-radius: 50%
+	display: inline-block
+	color: white
+	padding: 9px
+	margin-right: 35px
+	margin-bottom: 25px
+	margin-left: 35px
+
+.activo
+	width: 46px
+	height: 46px
+	background-color: $verdeBtnHover
+	border-radius: 50%
+	display: inline-block
+	color: white
+	padding: 13px
+	margin-right: 32px
+	margin-bottom: 25px
+	margin-left: 32px
+
+.desactivo
+	width: 40px
+	height: 40px
+	background-color: $verdeBtn
+	border-radius: 50%
+	display: inline-block
+	color: white
+	padding: 9px
+	margin-right: 35px
+	margin-bottom: 25px
+	margin-left: 35px
+
+/////////////// fonts //////////////
+
+@font-face
+	font-family: CorpoA-bold
+	src: url(../fontsWeb/CorpoA/CorpoA-Bold.ttf)
+	font-weight: normal
+
+@font-face
+	font-family: CorpoA
+	src: url(../fontsWeb/CorpoA/CorpoA.ttf)
+	font-weight: normal
+
+@font-face
+	font-family: CorpoA-light
+	src: url(../fontsWeb/CorpoA/CorpoALig.ttf)
+	font-weight: normal
+
+@font-face
+	font-family: CorpoS-bold
+	src: url(../fontsWeb/CorpoA/CorpoS-Bold.ttf)
+	font-weight: normal
+
+@font-face
+	font-family: CorpoS
+	src: url(../fontsWeb/CorpoA/CorpoS.ttf)
+	font-weight: normal
+
+@font-face
+	font-family: CorpoS-light
+	src: url(../fontsWeb/CorpoS/CorpoSLig.ttf)
+	font-weight: normal
+
+/////////////// 1 //////////////////
+#bg_gris
+	background-color: $grisFondo
+	margin-top: 50px
+
+label
+	color: white
+	margin-top: 50px
+	font-family: CorpoA-light
+
+hr
+	margin-top: 60px
+	width: 90%
+	height: 2px
+	background-color: white
+
+p
+	color: black
+	margin-top: 16px
+
+.prices
+	color: white
+	margin-top: 16px
+
+select
+	margin-top: 15px
+	margin-bottom: 60px
+	width: 200px
+	height: 25px
+	border-radius: 0px
+	font-family: CorpoA
+
+button
+	margin-top: -16px
+	width: 300px
+	height: 50px
+	background-color: $verdeBtn
+	color: white
+	border: none
+	font-family: CorpoA
+	font-size: 20px
+	transition: .3s
+	&:hover
+		background-color: $verdeBtnHover
+
+/////////////// 2 //////////////////
+
+.form-control
+	width: 100%
+
+.lab1
+	margin-top: 20px
+	font-family: CorpoA
+
+#parrafo2
+	color: white
+	font-family: CorpoA
+
+#estado2
+	margin-bottom: 50px
+
+.btn2
+	margin-top: 20px
+	display: inline-block
+	width: 180px !important
+	height: 35px !important
+	margin-left: 3%
+	margin-right: 3%
+	font-family: CorpoA
+	font-size: 17px
+
+/////////////// 3 //////////////////
+#bg_auto
+	width: 100%
+	margin-top: 40px
+
+#anchoMes, #anchoAnio
+	width: 110px
+	margin-bottom: 0px
+
+#paddingGris
+	margin-bottom: 30px
+
+
+/////////////// footer //////////////////
+footer
+	margin-top: 10%
+	background-color: black
+	height: 230px
+
+#lineFooter
+	margin: auto
+	width: 90%
+	height: 2px
+	background-color: white
+
+nav
+	margin-top: 30px
+	margin-right: 5%
+	margin-left: 5%
+	ul
+		color: #dcdcdc
+		font-size: 11px
+		a 
+			color: #dcdcdc
+			font-size: 11px
+			text-decoration: none !important
+			transition: .3s
+			&:hover
+				color: grey
+
+#logoFL
+	float: left
+	margin-top: 50px
+	margin-bottom: 30px
+	margin-left: 5%
+	img
+		width: 200px
+
+#logoFR
+	float: right
+	margin-top: 27px
+	margin-right: 5%
+	img
+		width: 90px
+
+@media screen and (max-width: 992px)
+	select
+		width: 160px
+
+	#anchoMes, #anchoAnio
+		width: 85px
+
+@media screen and (max-width: 768px)
+	#anchoMes, #anchoAnio
+		width: 130px
+		margin-top: 8px
+		margin-bottom: 10px
+	
+	.prices
+		margin-bottom: 50px
+
+	button
+		width: 140px
+		height: 40px
+		font-size: 18px
+
+	.btn2
+		width: 150px !important
+		height: 28px !important
+		font-size: 16px
+
+	nav
+		margin-top: 15px
+		ul
+			font-size: 10px
+			a
+				font-size: 10px
+
+	#logoFL
+		margin-top: 20px
+		margin-bottom: 22px
+		img
+			width: 130px
+
+	#logoFR
+		margin-top: 13px
+		img
+			width: 55px
+
+	footer
+		height: 160px
+
+@media screen and (max-width: 600px)
+	#imgLogo
+		width: 70%
+
+	select
+		width: 100%
+		margin-top: 0px
+		margin-bottom: 36px
+
+	hr 
+		margin-top: 15px
+		margin-bottom: 0px
+
+	h1
+		font-size: 30px
+		subtitle: 14px
+
+	#lineNav
+		margin-top: 12%
+		width: 220px
+
+	.normal
+		margin-right: 10px
+		margin-left: 10px
+
+
+
+
