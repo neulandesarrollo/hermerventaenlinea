@@ -73,14 +73,5 @@
     </body>
 </html>
 
-$.ajax({
-        type: "GET",
-        url: "assets/json/items.json.txt",
-        dataType: 'json',
-        success: function(s)
-        {
-            console.log(s);
-            createHomepageGoogleMap(_latitude,_longitude,s);
-        }
-    });
+
 

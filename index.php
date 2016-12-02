@@ -26,18 +26,17 @@ $db = mysqli_connect("yankuserver.com","yankuser_heruser","bI}81!]$&Hbm","yankus
             </div>
         </div>
     </section>
-
     <section id="bg_gris">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <center>
                     <form ng-controller="control_1">
-                        <div class="row">
+                        <div class="row" >
                             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
                                 <label>Clase:</label><br>
                                 <select name="carlist">
-                                  <option value="volvo" ng-repeat="x in clase">{{x}}</option>
+                                  <option value="volvo" ng-repeat="x in clase" class="classWrapper">{{x}}</option>
                                 </select>
                             </div>  
                             <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
@@ -97,25 +96,34 @@ $db = mysqli_connect("yankuserver.com","yankuser_heruser","bI}81!]$&Hbm","yankus
 include('footer.php');
 ?>
 
+<!-- Trae los objetos de las clases en el API SOAP DE MERCEDEZ-->
 <script>
-   $.ajax({
-                    type: "POST",
-                    url: "services.php",
-                    action: 'getData',
-                    data: ModeloCotizador,
-                    dataType: 'json',
-                    success: function(index, value)
-                     {
+    var request = $.ajax({
+                      method: "POST",
+                      url: "services.php",
+                      datatype: "json",
+                      data: { action: "getData" }
+                    })
+                    .done(function(response) {
+                        
+                    var data = JSON.parse(response);
+
+                    console.log(data.ModeloCotizador);
+                    var html = '';
+  
+                     $.each(data.ModeloCotizador, function(index, value) {
                         
                         html += '<div>';
                         html += '<a href="hermer_calculator_step2.php?id=' + value.id + '&des=' + value.descripcion + '" data-ima="' + value.descripcion + '">' + value.descripcion + '</a>';
                         html += '</div>';
-                           console.log(ModeloCotizador);
-
-                       }
 
                     });
-            
-     
 
+                    $('.classWrapper').html(html);
+                    });
+
+                     request.fail(function(data) {
+                    alert('¡Ups! Ocurrio un error');
+                });
 </script>
+
